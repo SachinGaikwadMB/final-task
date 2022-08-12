@@ -1,25 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './navbar/navbar.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { MovieDetailsComponent } from './movie-details/movie-details.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { TheatreSeatsComponent } from './theatre-seats/theatre-seats.component';
-import { SubMainPageComponent } from './components/main-page/sub-main-page/sub-main-page.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { TheatreSeatsComponent } from './components/theatre-seats/theatre-seats.component';
+import { RouterModule } from '@angular/router';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    DashboardComponent,
     MovieDetailsComponent,
     MainPageComponent,
     TheatreSeatsComponent,
-    SubMainPageComponent
+    FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
+  ],
+  exports: [
+    NavbarComponent,
+    MainPageComponent,
+    FooterComponent
   ]
 })
 export class FeatureModule { }

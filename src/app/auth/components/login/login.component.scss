@@ -1,0 +1,42 @@
+.login-title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    text-align: left;
+    font-family: Poppins;
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+
+.input{
+    width: 400px;
+    height: 40px;
+}
+
+.login-btn-container {
+    margin-top: 1.5rem;
+}
+
+.login-button {
+    width: 400px;
+    height: 40px;
+}
+.singup-link-container {
+    float: right;
+}
+
+.singup-link-container span {
+ font-size: 15px;
+ font-weight: 400;
+ font-family: Poppins;
+}
+
+.signup-btn {
+    text-decoration: none;
+}

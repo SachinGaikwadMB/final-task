@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sub-main-page',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubMainPageComponent implements OnInit {
 
+ @Input() moviesData : any = [];
+ @Input() playsData  : any = [];
+  
   constructor() { }
 
   ngOnInit(): void {

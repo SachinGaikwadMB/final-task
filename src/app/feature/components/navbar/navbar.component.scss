@@ -1,0 +1,25 @@
+@import '../../../../assets/variables/variables';
+.home, 
+.movies,
+.play,
+.theatre,
+.login-button,
+.signup-button {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.login-button {
+    text-decoration: none;
+}
+
+.nav-link:visited,
+.nav-link:link {
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  border-bottom: 2px solid $border-bottom-color;
+}
