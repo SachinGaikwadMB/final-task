@@ -3,15 +3,18 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-
   private baseUrl = environment.baseUrl;
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAllMovies() {
-   return this.http.get(this.baseUrl + '/movies');
+    return this.http.get(this.baseUrl + '/movies');
   }
-} 
+
+  getMovieById(id:number) {
+    return this.http.get(this.baseUrl+'/movies/' + id);
+  }
+}

@@ -1,1 +1,90 @@
-<p>movie-details works!</p>
+<div class="container-fluid shadow-lg mt-3 p-3 movie-details-container">
+  <div class="row">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{ movie.bannerUrl }}" alt="image" />
+      </div>
+      <div class="col-md-8 mx-auto movie-details p-3">
+        <div class="movie-title">
+          <h2>{{ movie.name }}</h2>
+        </div>
+        <div class="movie-category">
+          <span>{{ movie.category }}</span>
+        </div>
+        <div class="movie-actors">
+          <span>Actors &nbsp;&nbsp;&nbsp;:&nbsp; {{ movie.actor }}</span>
+        </div>
+        <div class="movie-directors">
+          <span>Director &nbsp;&nbsp; : &nbsp;{{ movie.director }}</span>
+        </div>
+        <div class="movie-discription">
+          <p>{{ movie.description }}</p>
+        </div>
+        <div class="back-button">
+          <a href=""
+            ><img
+              src="../../../../assets/images/back.png"
+              alt=""
+              routerLink="/"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid shadow-lg mt-4 p-4">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="content-section-tabs">
+        <ul>
+          <li>
+            <a href="">
+              <span class="today">Today</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <span>Tommarow</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        
+      </div>
+      <hr>
+
+
+<table class="table">
+    <tbody>
+      <tr>
+        <th>Row</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <th>Row2</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <th>Last Name</th>
+        <td>Carter</td>
+        <td>Parker</td>
+        <td>Rambo</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>johncarter@mail.com</td>
+        <td>peterparker@mail.com</td>
+        <td>johnrambo@mail.com</td>
+      </tr>
+    </tbody>
+  </table>
+  
+    </div>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+
+@import './../../../../assets/variables/variables';
+.movie-details-container {
+  font-family: Poppins;
+}
+
+.movie-title {
+  font-weight: 600;
+}
+
+img {
+  margin-left: 5rem;
+  width: 80%;
+  height: 350px;
+}
+
+.movie-category,
+.movie-actors,
+.movie-directors {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.movie-discription {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.back-button img {
+  margin-left: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.content-section-tabs {
+  display: table;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding-top: 20px;
+  margin-left: -470px;
+
+}
+
+ul li {
+  display: inline;
+  margin-left: 40px;
+
+}
+
+ul li a{
+  text-decoration: none;
+  font-family: Poppins;
+  text-transform: uppercase;
+  font-weight: 600;
+  color:$text-color;
+}
+
+// .today{
+//     border-bottom:2px solid $border-bottom-color;
+// }
+
+
+a:visited,
+a:link {
+  border-bottom: 2px solid $border-bottom-color;
+
+}
+
+a:hover,
+a:active {
+    border-bottom: 2px solid transparent;
+
+}

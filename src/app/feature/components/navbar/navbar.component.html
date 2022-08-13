@@ -24,24 +24,59 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item ml-3">
-          <a class="nav-link active home" aria-current="page" href="#">HOME</a>
+          <a
+            class="nav-link active home"
+            aria-current="page"
+            href="#"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="Home"
+            (click)="setFilterString('all')"
+            >HOME</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link active movies" aria-current="page" href="#"
+          <a
+            class="nav-link active movies"
+            aria-current="page"
+            href="#"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="MOVIES"
+            (click)="setFilterString('Drama')"
             >MOVIES</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link active play" aria-current="page" href="#">PLAY</a>
+          <a
+            class="nav-link active play"
+            aria-current="page"
+            href="#"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="PLAY"
+            (click)="setFilterString('Plays')"
+            >PLAY</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link active theatre" aria-current="page" href="#"
+          <a
+            class="nav-link active theatre"
+            aria-current="page"
+            href="#"
+            data-toggle="tooltip"
+            data-placement="bottom"
+            title="THEATRE"
             >THEATRE</a
           >
         </li>
       </ul>
       <div class="d-flex align-items-center">
-        <button type="button" class="btn btn-link px-3 me-2 login-button" routerLink="/login">
+        <button
+          type="button"
+          class="btn btn-link px-3 me-2 login-button"
+          routerLink="/login"
+        >
           <i class="fas fa-user-alt" style="font-size: 20px"></i> Login
         </button>
         <button type="button" class="btn btn-primary me-3 signup-button">

@@ -4,10 +4,19 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TheatreSeatsComponent } from './components/theatre-seats/theatre-seats.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
+import { SubMainPageComponent } from './components/main-page/sub-main-page/sub-main-page.component';
+import { FilterPipe } from '../shared/pipes/filter.pipe';
 
-
+const routes : Routes = [
+  {
+    path:'', component:MainPageComponent
+  },
+  {
+    path:'movies/:id', component:MovieDetailsComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -15,16 +24,20 @@ import { FooterComponent } from './components/footer/footer.component';
     MovieDetailsComponent,
     MainPageComponent,
     TheatreSeatsComponent,
-    FooterComponent
+    FooterComponent,
+    SubMainPageComponent,
+    FilterPipe
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule.forChild(routes)
   ],
   exports: [
     NavbarComponent,
     MainPageComponent,
-    FooterComponent
+    FooterComponent,
+    SubMainPageComponent,
+    FilterPipe
   ]
 })
 export class FeatureModule { }

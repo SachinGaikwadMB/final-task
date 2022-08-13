@@ -70,19 +70,5 @@
   <div class="title-movies">
     <h3>Now Showing</h3>
   </div>
-  <div class="row">
-    <ng-container *ngFor="let movie of moviesData">
-      <div class="card col-md-3">
-        <button style="border: none">
-          <img src="{{ movie.bannerUrl }}" alt="" />
-        </button>
-        <span>{{ movie.name }}</span>
-        <div class="book-now-button">
-          <button type="submit" class="btn btn-outline-primary login-button">
-            Book Now
-          </button>
-        </div>
-      </div>
-    </ng-container>
-  </div>
+  <app-sub-main-page [moviesData]="moviesData"></app-sub-main-page> 
 </div>

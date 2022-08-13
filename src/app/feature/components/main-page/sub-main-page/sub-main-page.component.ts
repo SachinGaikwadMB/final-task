@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DataFilterService } from 'src/app/shared/services/data-filter.service';
 
 @Component({
   selector: 'app-sub-main-page',
@@ -7,12 +8,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SubMainPageComponent implements OnInit {
 
- @Input() moviesData : any = [];
- @Input() playsData  : any = [];
+ @Input() moviesData: any = [];
+ filteredString: any = 'all';
+
   
-  constructor() { }
+  constructor(private dataFilterService : DataFilterService) { }
 
   ngOnInit(): void {
+    this.dataFilterService.getFilterString().subscribe((resp) => {
+      this.filteredString = resp;
+            console.log(this.moviesData);
+            
+    });
   }
 
 }
