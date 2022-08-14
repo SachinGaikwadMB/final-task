@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { SignUpDto } from 'src/app/commons/sign-up-dto';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -14,7 +15,11 @@ export class ApiService {
     return this.http.get(this.baseUrl + '/movies');
   }
 
-  getMovieById(id:number) {
-    return this.http.get(this.baseUrl+'/movies/' + id);
+  getMovieById(id: number) {
+    return this.http.get(this.baseUrl + '/movies/' + id);
+  }
+
+  saveUser(signUpDto: SignUpDto) {
+    return this.http.post<any>(this.baseUrl + '/user', signUpDto);
   }
 }

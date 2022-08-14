@@ -1,5 +1,6 @@
 
 @import './../../../../assets/variables/variables';
+
 .movie-details-container {
   font-family: Poppins;
 }
@@ -59,19 +60,26 @@ ul li a{
   color:$text-color;
 }
 
-// .today{
-//     border-bottom:2px solid $border-bottom-color;
-// }
+.today{
+    border-bottom:2px solid $border-bottom-color;
+}
 
-
-a:visited,
-a:link {
-  border-bottom: 2px solid $border-bottom-color;
+.table {
+  font-family: Poppins;
 
 }
 
-a:hover,
-a:active {
-    border-bottom: 2px solid transparent;
+.theatre-address {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+}
 
+.evening-show,
+.night-show {
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  color:$show-time-color;
 }

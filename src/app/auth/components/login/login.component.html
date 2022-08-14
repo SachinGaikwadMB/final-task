@@ -5,21 +5,59 @@
       <div class="col login-title">LOGIN</div>
       <hr />
       <div class="col form-container p-4">
-        <form>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
           <div class="form-group">
             <label class="form-control-label">Username</label>
-            <input type="text" class="form-control input" />
+            <input
+              type="text"
+              class="form-control input"
+              formControlName="username"
+            />
+            <small
+              class="text-danger"
+              *ngIf="
+                loginFormControls['username'].invalid &&
+                loginFormControls['username'].touched &&
+                loginFormControls['username']?.errors['required']
+              "
+            >
+              This field is required
+            </small>
           </div>
           <div class="form-group">
             <label class="form-control-label">Password</label>
-            <input type="password" class="form-control input" />
-          </div>
+            <input
+              type="password"
+              class="form-control input"
+              formControlName="password"
+            />
+            <small
+              class="text-danger"
+              *ngIf="
+                loginFormControls['password'].invalid &&
+                loginFormControls['password'].touched &&
+                loginFormControls['password']?.errors['required']
+              ">
+              This field is required
+            </small>
 
+            <small
+              class="text-danger"
+              *ngIf="
+                loginFormControls['password'].invalid &&
+                loginFormControls['password'].touched &&
+                loginFormControls['password']?.errors['pattern']
+              "
+            >
+              Please use strong password !
+            </small>
+          </div>
           <div class="col-lg-12">
             <div class="col-lg-6 login-btn-container">
               <button
                 type="submit"
                 class="btn btn-outline-primary login-button"
+                [disabled]="!loginForm.valid"
               >
                 LOGIN
               </button>

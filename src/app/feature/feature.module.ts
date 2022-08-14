@@ -8,13 +8,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { SubMainPageComponent } from './components/main-page/sub-main-page/sub-main-page.component';
 import { FilterPipe } from '../shared/pipes/filter.pipe';
+import { AuthGuard } from '../shared/guards/auth.guard';
 
 const routes : Routes = [
   {
     path:'', component:MainPageComponent
   },
   {
-    path:'movies/:id', component:MovieDetailsComponent
+    path:'movies/:id', component:MovieDetailsComponent, canActivate:[AuthGuard]
+  },
+  {
+    path:'seats', component:TheatreSeatsComponent
   }
 ]
 
