@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
@@ -20,16 +21,33 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'movie-ticket-booking-ui'`, () => {
+  
+  it('should have app-navbar', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('movie-ticket-booking-ui');
+    const { debugElement } = fixture;
+    const navbar = debugElement.query(By.css('app-navbar'));
+     expect(navbar).toBeTruthy();
   });
 
-  it('should render title', () => {
+  it('should have app-navbar', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('movie-ticket-booking-ui app is running!');
+    const { debugElement } = fixture;
+    const navbar = debugElement.query(By.css('app-navbar'));
+     expect(navbar).toBeTruthy();
   });
+
+  it('should have router outlet', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const { debugElement } = fixture;
+    const router = debugElement.query(By.css('router-outlet'));
+     expect(router).toBeTruthy();
+  });
+
+  it('should have app-footer', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const { debugElement } = fixture;
+    const router = debugElement.query(By.css('app-footer'));
+     expect(router).toBeTruthy();
+  });
+
 });

@@ -1,4 +1,7 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 import { MovieDetailsComponent } from './movie-details.component';
 
@@ -8,7 +11,9 @@ describe('MovieDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MovieDetailsComponent ]
+      declarations: [ MovieDetailsComponent],
+      imports:[RouterTestingModule,HttpClientModule],
+      providers:[ApiService]
     })
     .compileComponents();
   });
