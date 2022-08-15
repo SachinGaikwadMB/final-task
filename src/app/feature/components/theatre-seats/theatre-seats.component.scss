@@ -1,21 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-
-@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
-
-body {
-	font-family: "Montserrat", sans-serif;
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-  background-color: #242333;
-  color: #fff;
-  margin: 0;
-}
 
 * {
-	font-family: "Montserrat", sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
   box-sizing: border-box;
 }
 
@@ -26,7 +11,6 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: #242333;
-  
 }
 
 .movie-container select {
@@ -81,15 +65,15 @@ body {
 
 .showcase .seat:not(.occupied):hover {
   cursor: default;
-  transform: scale(1);
+  transform: scale(1.2);
 }
 
 .showcase {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  background: rgba(0,0,0,0.1);
-  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 35px 5px;
   border-radius: 5px;
   color: #777;
 }
@@ -113,16 +97,16 @@ body {
 
 .screen {
   background: #fff;
-  height: 70px;
-  width: 70%;
+  height: 65px;
+  width: 40%;
   margin: 15px 0;
   transform: rotateX(-45deg);
-  box-shadow: 0 3px 10px rgba(255,255,255,0.7);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
 }
 
 p.text {
   margin: 40px 0;
-  color: #fff;
+  color: green;
 }
 
 p.text span {
@@ -135,3 +119,12 @@ p.text span {
   color: #fff;
 }
 
+ul {
+  margin-top: 20px;
+  margin-bottom: -1rem;
+}
+
+.invoice-section {
+  font-family: Poppins;
+  color:white
+}
